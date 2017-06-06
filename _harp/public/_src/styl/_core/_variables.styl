@@ -1,0 +1,91 @@
+/*
+ * - VARIABLES
+ *
+ * 1. Colors
+ * 2. Media Queries
+ * 3. Typografhy
+ * 4. Header
+ * 5. Footer
+ * 6. Spaces
+ * 7. Grids
+ * ================================== */
+
+
+/* -------------------------------------
+ * 1. Colors
+ * ---------------------------------- */
+$primary-color        = #ff5c2b;
+$primary-color--light = lighten($primary-color, 15%)
+$primary-color--dark  = darken($primary-color, 15%)
+
+$secondary-color        = #313131
+$secondary-color--light = lighten($secondary-color, 15%)
+$secondary-color--dark  = darken($secondary-color, 15%)
+
+//Grey scale 
+$grey-light  = #ccc
+$grey        = #666
+$grey-dark   = #010101
+
+$text-color = #999;
+
+
+/* -------------------------------------
+ * 2. Media Queries
+ * ---------------------------------- */
+$screen-xs   = 520px  // Extra small screen / phone
+$screen-sm   = 760px  // Small screen / tablet
+$screen-md   = 990px  // Medium screen / desktop
+$screen-lg   = 1200px // Large screen / wide desktop
+$screen-xlg  = 1400px // Extra Large screen / wide desktop
+$screen-xxlg = 1900px // Extra Large screen / wide desktop
+
+// Rupture Settings
+rupture.mobile-cutoff  = $screen
+rupture.tablet-cutoff  = $screen-md
+rupture.desktop-cutoff = $screen-lg
+rupture.hd-cutoff      = $screen-xlg
+
+rupture.scale          = 0 $screen-xs $screen-sm $screen-md $screen-lg $screen-xlg $screen-xxlg
+rupture.scale-names    = '0' 'xs' 'sm' 'md' 'lg' 'xlg' 'hd'
+rupture.anti-overlap   = -1px
+
+
+/* -------------------------------------
+ * 3. Typografhy
+ * ---------------------------------- */
+$primary-font            = 'Roboto',Times,Georgia,serif
+$primary-font--condensed = 'Roboto Condensed', Times, Georgia, serif
+
+
+/* -------------------------------------
+ * 4. Header
+ * ---------------------------------- */
+$header-height = 7.2rem
+
+
+/* -------------------------------------
+ * 5. Footer
+ * ---------------------------------- */
+$footer-height = 6rem
+
+
+/* -------------------------------------
+ * 6. Spaces
+ * ---------------------------------- */
+$space         = 2rem                 // Regular space margin
+$space-xs      = ($space / 4)         // Extra small space margin
+$space-sm      = ($space / 2)         // Small space margin
+$space-md      = ($space + $space-sm) // Medium space margin
+$space-lg      = ($space * 2)         // Large space margin
+$space-xlg     = ($space * 3)         // Extra Large space margin
+
+$space-gutter  = $space
+
+
+/* -------------------------------------
+ * 7. Grids
+ * ---------------------------------- */
+ 
+@lost gutter 0
+@lost flexbox flex

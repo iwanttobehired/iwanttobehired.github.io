@@ -1,0 +1,19 @@
+.filter
+	lost-center ($screen-lg + ($space-lg * 2)) $space-lg
+	align-items center
+	margin-top $space-lg + $space-xs
+	margin-bottom $space
+	
+	+above(xs)
+		[class^=btn]
+			margin-left auto
+			
+	+below(xs)
+		flex-direction column
+		align-items center
+		
+
+	// Filter Title
+	&__title
+		font(text-large, primary, bold)
+		color $grey-dark

@@ -1,0 +1,17 @@
+// Header --------------------------
+
+.header
+  lost-center ($screen-lg + ($space-lg * 2)) $space-lg
+  width 100%
+  align-items center
+  
+  +above(sm)
+  	height $header-height
+  
+  +below(xs)
+  	position fixed
+  	top 0
+  	height $header-height + $space-md
+  	background-color #fff
+  	box-shadow 0 2px 5px 0 rgba($secondary-color,0.16), 0 6px 8px 0 rgba($secondary-color,0.12)
+  	z-index	10

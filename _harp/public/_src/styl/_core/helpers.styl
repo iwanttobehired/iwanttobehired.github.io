@@ -1,0 +1,43 @@
+// REM Reset ----------------------
+html
+  font-size 10px
+  +below(xs)
+    font-size 8px
+
+
+// Sticky footer -------------------
+body
+  display flex
+  flex-direction column
+  overflow-x hidden
+  
+  +below(xs)
+    padding-top $header-height + $space-md
+
+  main
+    $main-height = $header-height + $footer-height
+    min-height calc(100vh - 13.6rem)
+
+
+// Container -----------------------
+.container
+  +above(xs)
+    lost-center ($screen-lg + ($space-lg * 2)) $space-lg no-flex
+    
+  +below(xs)
+    lost-center ($screen-lg + $space-lg) $space no-flex
+     
+
+
+// Img responsive ------------------
+.img-responsive
+  max-width 100%
+
+
+// Divider -------------------------
+.divider
+  lost-center ($screen-lg) 0 no-flex
+  height 1px 
+  width 100%
+  background-color $grey-light
+

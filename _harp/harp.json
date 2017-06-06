@@ -1,0 +1,25 @@
+{
+  "domains": ["iwanttobehired.github.io"],
+
+  "language": "en",
+
+  "globals": {
+
+    "site_title": "André Mendes - Front-End Developer",
+
+    "description": "My awesome page to be hired in RedVentures!",
+
+    "twitter": "mendes_adc",
+    "facebook": "mdc.andre",
+    "github": "andre-mendes",
+
+    "site_url": "iwanttobehired.github.io",
+
+    "sitemap": {
+      "enabled": true,
+      "changefreq": "daily"
+    },
+
+    "copy": [".gitignore", "README.md", "CNAME"]
+  }
+}

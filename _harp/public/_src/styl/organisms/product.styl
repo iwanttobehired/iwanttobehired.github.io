@@ -1,0 +1,96 @@
+// Product Container ------------------
+.product
+	margin-top $space
+	overflow-x: hidden;
+	width 100%
+
+	// Product Item
+	&__item
+		background-color #fff
+		border 1px solid transparent
+		display inline-block
+		transition all .2s
+		text-decoration none
+		white-space normal
+		
+		+above(sm)
+			padding $space-md $space-xlg - 1rem $space-sm
+			width 25%
+		
+		+below(sm)
+			padding $space-md $space + $space-xs $space-sm
+			width 50%
+
+		+below(xs)
+			padding $space-md $space + $space-xs $space-sm
+			width 100%
+		
+		&:hover, &:focus
+			border-color $grey-light
+
+			+above(sm)
+				.btn
+					opacity 1
+				.product__description
+					transform translate3d(0, -20px, 0)
+	
+	// Product photo
+	&__photo
+		display block
+		margin 0 auto
+		
+
+	// Product description
+	&__description
+		transition transform .2s
+		will-change transform
+
+		+below(xs)
+			text-align center 
+		
+		+above(sm)
+			.btn
+				opacity 0
+				will-change opacity
+			
+
+	// Product custom text
+	&__custom
+		font(text-small, primary, bold, uppercase)
+		border-bottom 1px solid $grey-light
+		color $grey
+		margin-bottom 1.2rem
+		line-height 1.9
+		
+		img
+			display inline-block
+			vertical-align: sub;
+			margin-right 5px
+	
+	
+	// Product name
+	&__name
+		font(text-medium, primary, bold)
+		color $grey-dark
+		margin-bottom .8rem
+		min-height $space-lg + 1rem
+	
+  
+	// Product model
+	&__model
+		font(text-medium, primary)
+		color $text-color
+		margin-bottom .8rem
+	
+	// Product price
+	&__price
+		font(text, primary, bold, uppercase)
+		color $grey
+		margin-bottom .8rem
+	
+	// Product payment
+	&__payment
+		font(text, primary)
+		color $grey
+		margin-bottom $space-sm + $space-xs
+		

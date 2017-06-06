@@ -1,0 +1,140 @@
+/*
+ * Font Family
+ * -------------------------------------------------- */
+
+font-family(family)
+  if (family == primary)
+    font-family 'Roboto', Arial, sans-serif
+
+  if (family == primary-condensed)
+    font-family 'Roboto Condensed', Arial, sans-serif
+
+
+/*
+ * Text transform
+ * -------------------------------------------------- */
+ 
+font-transform(transform = '')
+  if (transform == uppercase)
+    text-transform uppercase
+
+  if (transform == lowercase)
+    text-transform lowercase
+    
+
+/*
+ * Weight
+ * -------------------------------------------------- */
+
+font-weight(value = '')
+  if (value == extra-bold)
+    font-weight 900
+    
+  if (value == bold)
+    font-weight 700
+
+  if (value == regular)
+    font-weight 400
+
+  if (value == light)
+    font-weight 300
+
+
+/*
+ * Font
+ * -------------------------------------------------- */
+font(type = '', family = '', weight = '', transform = '')
+
+  /*
+   * Type
+   * -------------------------------------------------- */
+
+  if (type)
+
+    /*
+     * Titles
+     * -------------------------------------------------- */
+    if (type == h1)
+      +above(xs)
+        font-size 7.2rem
+      
+      +below(xs)
+        font-size 5.2rem
+
+    if (type == h2)
+      font-size 3.6rem
+
+    if (type == h3)
+      font-size 2.8rem
+
+    if (type == h4)
+      font-size 2.6rem
+
+    if (type == h5)
+      font-size 2.4rem
+
+    if (type == h6)
+      font-size 2.2rem
+
+
+    /*
+     * Regular texts
+     * -------------------------------------------------- */
+       
+    if (type == text-small)
+      +above(xs)
+        font-size 1.3rem
+      +below(xs)
+        font-size 1.5rem
+
+    if (type == text-medium)
+      +above(xs)
+        font-size 1.4rem
+      +below(xs)
+        font-size 1.6rem
+        
+    if (type == text)
+      +above(xs)
+        font-size 1.6rem
+      +below(xs)
+        font-size 1.8rem
+
+    if (type == text-large)
+      +above(xs)
+        font-size 1.8rem
+      +below(xs)
+        font-size 2rem
+
+    if (type == text-xlarge)
+      +above(xs)
+        font-size 2rem
+      +below(xs)
+        font-size 2.2rem
+        
+        
+  /*
+   * Family
+   * -------------------------------------------------- */
+
+  if (family)
+    font-family(family)
+
+
+  /*
+   * Wight
+   * -------------------------------------------------- */
+
+  if (weight)
+    font-weight(weight)
+  
+
+  /*
+   * Wight
+   * -------------------------------------------------- */
+     
+  if (transform)
+    font-transform(transform)
+
+
+
+

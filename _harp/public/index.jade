@@ -1,0 +1,121 @@
+
+//- Banner 
+//---------------------------------------
+img.img-responsive(src="/assets/img/banner.png" alt="Jogador chutando uma bola")
+
+
+//- Filter 
+//---------------------------------------
+section.filter
+  h2.filter__title
+    | Chuteiras HyperVenon:  
+
+  
+  form.labels-box 
+    input.checkbox(type="checkbox" checked data-filter-type='hightop' name="filter" id="highTop")
+    label.checkbox__label(for="highTop" title='Filtrar chuteiras com cano alto') 
+      | Cano Alto
+
+    input.checkbox(type="checkbox" checked data-filter-type='lowTop' name="filter" value="lowTop" id="lowTop")
+    label.checkbox__label(for="lowTop" title='Filtrar chuteiras com cano baixo')
+      | Cano baixo
+
+    input.checkbox(type="checkbox" checked data-filter-category='campo' name="filter" value="soccer" id="soccer")
+    label.checkbox__label(for="soccer" title='Filtrar chuteiras para campo')
+      | Futebol Campo
+
+    input.checkbox(type="checkbox" checked data-filter-category='society' name="filter" value="Society" id="Society")
+    label.checkbox__label(for="Society" title='Filtrar chuteiras para society')
+      | Futebol Society
+
+  //- Show all
+  label.btn.btn--secondary(data-filter='all' title='Mostrar todos os produtos')
+    | Mostrar todos
+
+
+//- Divider
+div.container
+  div.divider
+
+
+//- Best Sellers
+//---------------------------------------
+section.container.carousel__section#bestSellers(data-carousel='carousel')
+
+  header
+    h2.carousel__title 
+      | Mais vendidos
+      
+  div.product
+    div(data-carousel='list')
+      
+      for product in public.products._data.bestsellers
+        section.rv-carousel__item.product__item(data-product-type=(product['hightop'] == true ? 'hightop' : 'lowTop'), data-product-category=product['category'] data-carousel='item')
+          img.product__photo(src="#{ product.image }" alt="#{ product.title }")
+
+          div.product__description
+            div.product__custom
+              img(src="/assets/img/personalize.jpg" aria-hidden="true" alt="Icone personalize")
+              | Personalize
+
+            h1.product__name #{ product.title }
+            
+            if (product.hightop == true)
+              p.product__model
+                | Cano alto
+            else
+              p.product__model 
+                | Cano baixo
+
+            p.product__price R$#{ product.price }
+            p.product__payment 
+              | ou #{ product.installments.number }X de R$#{ product.installments.value } sem juros
+
+            a.btn.btn--primary(title="Comprar #{ product.title }")
+              | Comprar
+
+  div.rv-pagination(data-carousel='pagination' data-target='#bestSellers')
+
+
+//- Releases
+//---------------------------------------
+section.container.carousel__section#Releases(data-carousel='carousel')
+
+  header
+    h2.carousel__title Lançamentos
+
+  div.product
+    div(data-carousel='list')
+
+      for product in public.products._data.releases
+        section.rv-carousel__item.product__item(data-product-type=(product['hightop'] == true ? 'hightop' : 'lowTop'), data-product-category=product['category'] data-carousel='item')
+          img.product__photo(src="#{ product.image }" alt="#{ product.title }")
+
+          div.product__description
+            div.product__custom
+              img.product__photo(src="/assets/img/personalize.jpg" aria-hidden="true" alt="Icone personalize")
+              | Personalize
+
+            h1.product__name #{ product.title }
+            p.product__model 
+              if (product.hightop == true)
+                | Cano alto
+              else
+                | Cano baixo
+
+            p.product__price R$#{ product.price }
+            p.product__payment 
+              | ou #{ product.installments.number }X de R$#{ product.installments.value } sem juros
+
+            a.btn.btn--primary(title="Comprar #{ product.title }")
+              | Comprar
+
+  div.rv-pagination(data-carousel='pagination' data-target='#bestSellers') 
+
+//- Just do it - banner
+//---------------------------------------
+section.banner-bottom
+  h2.banner-bottom__title 
+    | Just do it.
+  a.btn.btn--secondary(title="Ver todos os produtos" href="./produtos/")
+    | Todos os produtos

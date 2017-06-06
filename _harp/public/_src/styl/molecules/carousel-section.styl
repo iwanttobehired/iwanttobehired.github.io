@@ -1,0 +1,22 @@
+// Section -------------------------- 
+.carousel__section
+	padding-top $space-xlg + $space
+	min-height 20rem
+	
+	& + &
+		padding-bottom $space-xlg + $space-xlg
+
+
+// Title ----------------------------
+.carousel__title
+	font(text, primary, bold)
+	color $grey-dark
+	position relative
+
+	&:after
+		content 'Nenhum produto aqui, filtre novamente :)'
+		position absolute
+		bottom -7rem
+		left 0
+		font-size 1.5rem
+		z-index -1

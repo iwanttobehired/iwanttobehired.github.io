@@ -1,0 +1,57 @@
+input[type=checkbox]
+	position absolute
+	left -99999px
+	text-indent -99999px
+
+
+// Custom checkbox ------------------------
+.checkbox 
+	
+	// Checked
+	&:checked + .checkbox__label:before
+		border-top 0 
+		border-right 0 
+		border-color $primary-color
+		border-width 2px
+		border-radius: 10px 0 0px 10px;
+		background-color #fff
+		transform translateY(-75%) rotate(-45deg) scaleY(.5)
+		
+	 
+	// Label
+	&__label
+		font(text, primary, bold)
+		color $text-color
+		cursor pointer
+		position relative
+		padding-left $space + $space-sm
+		
+		+above(xs)
+			margin-left $space 
+		
+		+below(xs)
+			width 50%
+			display inline-block
+			margin $space 0
+		
+		// Checkbox
+		&:before
+			content ''
+			display block
+			position absolute
+			left 0
+			top 50%
+			transform translateY(-50%)
+			border 1px solid $grey-light
+			background-color #fafafa
+			width $space
+			height $space
+			transition all .2s
+			will-change transform
+
+
+// Hide products - filter
+.hidden
+	display none !important
+	visibility hidden
+	width 0 !important

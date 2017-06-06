@@ -1,0 +1,140 @@
+// Default Properties -------------------
+.btn
+  font(text-small, primary, regular, uppercase)
+  display inline-block
+  min-width 180px
+  height 46px
+  line-height 46px
+  padding 0 20px
+  border-radius 5px 
+  border none
+  color #fff
+  cursor pointer
+  text-align center
+  transition background-color .3s
+  position relative
+  overflow hidden
+  z-index 1
+  &:not(button)
+    text-decoration none
+  
+  &:after
+  &:before
+    content '';
+    position absolute
+    height 100%
+    width 100%
+    bottom 100%
+    left 0
+    z-index -1
+    transition transform 0.3s
+    transition-timing-function cubic-bezier(0.75, 0, 0.125, 1)
+     
+  // Primary button
+  &--primary
+    background-color $primary-color
+    
+    &:before
+      background-color $secondary-color
+    &:after
+      background-color lighten($primary-color, 20%)
+    
+    &:hover:before
+    &:hover:after
+      transform translate3d(0, 100%, 0)
+    &:hover:after
+      transition-delay .15s
+  
+  // Secondary button
+  &--secondary 
+    background-color $secondary-color
+    
+    &:before
+      background-color $primary-color
+    &:after
+      background-color lighten($secondary-color, 20%)
+    
+    &:hover:before
+    &:hover:after
+      transform translate3d(0, 100%, 0)
+    &:hover:after
+      transition-delay .15s
+    
+
+
+// Button link ---------------------------
+.link
+  font(text-large, primary, bold)
+  color $primary-color
+  text-decoration none
+  transition box-shadow .2s
+  
+  &:hover
+    box-shadow 0 2px 0 $primary-color
+
+
+
+// Button navbar ---------------------------
+.navbar__btn
+  +below(xs)
+    position relative
+    width $space-lg
+    height $space-xs
+    background-color $secondary-color
+    border-radius 3px
+    transition all .3s
+    will-change transform
+    
+    &:before, &:after
+      content ''
+      position absolute
+      display block
+      width $space-lg
+      height $space-xs
+      background-color $secondary-color
+      border-radius 3px
+    
+    &:before
+      transform translate3d(0, -10px, 0)
+      will-change transform
+    
+    &:after
+      transform translate3d(0, 10px, 0)
+      will-change opacity
+
+
+// Overlay to close navbar
+.navbar__overlay
+  +below(xs)
+    width 100vw 
+    height 100vh
+    position absolute
+    top $header-height + $space-md
+    left 0
+    background-color $secondary-color
+    transition opacity .3s
+    opacity 0
+    visibility hidden
+  
+// Trigger 
+.navbar__trigger-label
+  order 3
+  margin-left $space-md
+  
+// Btn checked
+.navbar__trigger:checked
+  & + .navbar__trigger-label .navbar__btn
+    transform rotate(45deg)
+    &:before
+      transform rotate(90deg)
+    &:after
+      opacity 0
+      
+  
+  & + .navbar__trigger-label .navbar__overlay
+    opacity .7
+    visibility visible
+    
+  & ~ .navbar
+    transform translateX(0)
+    

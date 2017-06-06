@@ -1,0 +1,24 @@
+header.header(role='banner')
+  a(href="/" title="Página inicial")
+    img.logo(src="/assets/img/nike-logo.png" alt="Logo Nike" role="logo")
+  
+  input.navbar__trigger#navbarTrigger(type="checkbox" aria-hidden="true")
+  label.navbar__trigger-label(for="navbarTrigger" aria-label="Botão de navegação")
+    div.navbar__btn
+    div.navbar__overlay
+       
+  nav.navbar
+    a.navbar__link(href="/Masculino/" title="Masculino"
+      class="#{ current.path[0] == 'Masculino' ? 'active' : '' }") Masculino
+
+    a.navbar__link(href="/Feminino/" title="Feminino"
+      class="#{ current.path[0] == 'Feminino' ? 'active' : '' }") Feminino
+
+    a.navbar__link(href="/Menino/" title="Menino"
+      class="#{ current.path[0] == 'Menino' ? 'active' : '' }") Menino
+
+    a.navbar__link(href="/Menina/" title="Menina"
+      class="#{ current.path[0] == 'Menina' ? 'active' : '' }") Menina
+  
+  a.cart(title="Meus pedidos" data-number="")
+    img(src="/assets/img/carrinho.jpg")

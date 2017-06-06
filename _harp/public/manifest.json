@@ -1,0 +1,14 @@
+{
+  "name": "Nike - Just do it.",
+  "icons": [
+    {
+      "src": "/assets/img/nike-logo-splash.jpg",
+      "sizes": "48x48",
+      "type": "image/png",
+      "density": 1.0
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "#ff5c2b"
+}

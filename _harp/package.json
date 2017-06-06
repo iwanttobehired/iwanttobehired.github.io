@@ -1,0 +1,42 @@
+{
+  "name": "andre",
+  "version": "1.0.0",
+  "description": "My awesome page to be hired at RedVentures!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iwanttobehired/iwanttobehired.github.io.git"
+  },
+  "author": "Andre Mendes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iwanttobehired/iwanttobehired.github.io/issues"
+  },
+  "homepage": "https://github.com/iwanttobehired/iwanttobehired.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.5.1",
+    "browser-sync": "^2.17.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-group-css-media-queries": "^1.2.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-stylus": "^2.5.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-pug": "^3.0.3",
+    "lost": "^7.1.0",
+    "poststylus": "^0.2.3",
+    "rupture": "^0.6.2"
+  },
+  "dependencies": {
+    "harp": "^0.21.0"
+  }
+}

@@ -1,0 +1,12 @@
+
+!= partial("./_partials/head")
+
+  body 
+    != partial("./_partials/header")
+
+
+    main
+      != yield
+
+
+    != partial("./_partials/footer")
